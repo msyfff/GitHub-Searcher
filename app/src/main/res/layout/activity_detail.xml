@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_activty"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="4dp"
+    tools:context=".ui.DetailActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_item_photo_detail"
+
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/nama_orang_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sen_bold"
+        android:paddingTop="8dp"
+        android:paddingBottom="2dp"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_item_photo_detail"
+        tools:text="@string/nama_orang" />
+
+    <TextView
+        android:id="@+id/id_orang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sen"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nama_orang_detail"
+        tools:text="@string/nama_orang" />
+
+    <TextView
+        android:id="@+id/follower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/sen"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:drawableStartCompat="@drawable/people"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_orang"
+        tools:text="@string/nama_orang" />
+
+    <TextView
+        android:id="@+id/kota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5dp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:drawableStartCompat="@drawable/city"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/follower"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="@string/nama_orang" />
+
+
+    <ImageView
+        android:id="@+id/btnOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="5dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="0dp"
+        android:src="@drawable/open"
+        app:layout_constraintBottom_toBottomOf="@+id/nama_orang_detail"
+        app:layout_constraintStart_toEndOf="@+id/nama_orang_detail"
+        app:layout_constraintTop_toBottomOf="@+id/img_item_photo_detail" />
+
+    <ImageView
+        android:id="@+id/btnShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/share"
+        app:layout_constraintBottom_toBottomOf="@+id/img_item_photo_detail"
+        app:layout_constraintStart_toEndOf="@+id/img_item_photo_detail" />
+
+    <ProgressBar
+        android:id="@+id/progressBars"
+        style="?attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/memuat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sen_bold"
+        android:text="@string/memuat"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBars"
+        app:layout_constraintVertical_bias="0.0"
+        tools:visibility="gone" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline"
+        app:tabTextColor="@color/black" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/light_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabs" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="304dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_fav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/favorite"
+        android:foregroundGravity="bottom"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/baseline_favorite_border_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

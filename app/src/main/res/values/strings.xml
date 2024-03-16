@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">GitHub Searcher</string>
+    <string name="nama_orang">Nama Orang</string>
+    <string name="masukkan_kata_kunci">Masukkan Kata Kunci</string>
+    <string name="pengguna_tidak_ditemukan">Pengguna Tidak Ditemukan</string>
+    <string name="searchbar_hint">Masukkan Kata</string>
+    <string name="cari_disini">Cari Disini</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="kata_kunci">Masukkan Kata Kunci</string>
+    <string name="github_user">GitHub User</string>
+    <string name="kata_kunci_user">Masukkan Nama Username</string>
+    <string name="cari">Silahkan Cari Pengguna \ndengan Cara Klik Icon Search</string>
+    <string name="tidak_ditemukan">Pengguna Tidak Ditemukan</string>
+    <string name="following">%1$s Followings</string>
+    <string name="followers">%1$s Followers</string>
+    <string name="terjadi_error">Terjadi Error \nCoba Periksa Internet Anda dan Ulangi Lagi</string>
+    <string name="memuat">Memuat</string>
+    <string name="tidak_follow">Pengguna Tidak Difollow Siapapun</string>
+    <string name="tidak_following">Pengguna Tidak Memfollow Siapapun</string>
+    <string name="follow">Followers</string>
+    <string name="folling">Following</string>
+    <string name="content_tab_text">Pengguna Tidak %1$s Siapapun</string>
+    <string name="terjadi_error_coy">Terjadi Error \nSilahkan Coba Lagi</string>
+    <string name="pengguna_tidak_difollow_siapapun">Pengguna Tidak Difollow Siapapun</string>
+    <string name="unknown">Unknown</string>
+    <string name="follower_following">%1$s Follower   %2$s Following</string>
+    <string name="favorite">Favorite</string>
+    <string name="belum_ada">Belum Ada User yang di Favoritkan</string>
+    <string name="menu">menu</string>
+</resources>
